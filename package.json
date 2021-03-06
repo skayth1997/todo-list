@@ -1,5 +1,6 @@
 {
   "name": "todo-list",
+  "homepage": "https://skayth1997.github.io/todo-list",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -28,7 +29,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://github.com/skayth1997/todo-list/settings",
   "eslintConfig": {
     "extends": [
       "react-app",
