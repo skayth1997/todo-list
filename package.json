@@ -28,7 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://myusername.github.io",
+  "homepage": "https://github.com/skayth1997/todo-list/settings",
   "eslintConfig": {
     "extends": [
       "react-app",
