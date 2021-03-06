@@ -1,0 +1,117 @@
+body {
+  background-color: #ededed;
+
+  .list-group-item {
+    &:hover {
+      background: #ededed;
+    }
+  }
+
+  .todo-color {
+    position: relative;
+    top: 5px;
+  }
+
+  .todo-edit-icon, .todo-delete-icon {
+    position: relative;
+    top: 5px;
+    cursor: pointer;
+
+    &:hover {
+      top: 4px;
+    }
+  }
+
+  .todo-toggle-button {
+    position: relative;
+    top: 3px;
+
+    &:hover {
+      top: 2px;
+    }
+  }
+
+  .create-todo-modal, .edit-todo-modal {
+    height: 400px;
+  }
+
+  .delete-todo-modal {
+    height: 150px;
+    left: 25%;
+    right: 25%;
+  }
+}
+
+.default-modal {
+  z-index: 999999999;
+  opacity: 1;
+  display: block;
+  position: fixed;
+  top: 100px;
+  bottom: 100px;
+  left: 20%;
+  right: 20%;
+  background-color: #fff;
+  border: 1px solid #ababab;
+  border-radius: 5px;
+}
+
+.default-modal-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .5);
+}
+
+.modal-close {
+  font-size: 20px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.resize-none {
+  resize: none;
+}
+
+.color-picker-box-wrapper {
+  padding: 5px;
+  background: #fff;
+  border-radius: 1px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+  display: inline-block;
+  cursor: pointer;
+
+  .color-picker-box {
+    width: 36px;
+    height: 14px;
+    border-radius: 2px;
+    border: 1px solid #ededed;
+  }
+}
+
+.color-picker-popover {
+  position: absolute;
+  z-index: 2;
+}
+
+.color-picker-cover {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
