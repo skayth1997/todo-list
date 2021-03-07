@@ -11,5 +11,5 @@ export {
   UPDATE_TODO,
   DELETE_TODO,
   SHOW_MODAL,
-  HIDE_MODAL
+  HIDE_MODAL,
 };

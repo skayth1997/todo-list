@@ -5,16 +5,16 @@ import List from "../../elements/list";
 import { default as ListItem } from "../../elements/list/Item";
 import Checkbox from "../../elements/form/Checkbox";
 import ToggleButton from "../../elements/ToggleButton";
-import { updateTodo } from "../../../store/actions/todo";
+import { completeTodo, incompleteTodo, updateTodo } from "../../../store/actions/todo";
 import SvgEdit from "../../icons/SvgEdit";
 import SvgDelete from "../../icons/SvgDelete";
 import { showModal } from "../../../store/actions/modal";
 
-const TodoList = ({ todos, updateTodo, showModal }) => {
+const TodoList = ({ todos, completeTodo, incompleteTodo, showModal }) => {
   const [visitedTodoIds, setVisitedTodoIds] = useState([]);
 
   const handleUpdateTodo = (e, todo) => {
-    updateTodo({ ...todo, completed: e.target.checked });
+    e.target.checked ? completeTodo(todo) : incompleteTodo(todo);
   };
 
   const handleToggleTodo = (id) => {
@@ -71,7 +71,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  updateTodo: (todo) => dispatch(updateTodo(todo)),
+  completeTodo: (todo) => dispatch(completeTodo(todo)),
+  incompleteTodo: (todo) => dispatch(incompleteTodo(todo)),
   showModal: (modal) => dispatch(showModal(modal)),
 });
 

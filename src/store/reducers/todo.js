@@ -1,4 +1,9 @@
-import { CREATE_TODO, UPDATE_TODO, DELETE_TODO, FETCH_TODOS } from "../../consts/action-types";
+import {
+  CREATE_TODO,
+  UPDATE_TODO,
+  DELETE_TODO,
+  FETCH_TODOS,
+} from "../../consts/action-types";
 
 const todoReducer = (state = [], action) => {
   switch (action.type) {
